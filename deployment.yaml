@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-container
-        image: thevenusian/flask-devops-app:latest
+        image: thevenusian/flask-devops-app:6827bf7
         ports:
         - containerPort: 5000
         livenessProbe:
