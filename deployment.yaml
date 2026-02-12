@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-container
-        image: thevenusian/flask-devops-app:6827bf7
+        image: thevenusian/flask-devops-app:latest
         ports:
         - containerPort: 5000
         livenessProbe:
@@ -29,4 +29,10 @@ spec:
             port: 5000
           initialDelaySeconds: 5
           periodSeconds: 5
-
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "250m"
+            memory: "256Mi"
